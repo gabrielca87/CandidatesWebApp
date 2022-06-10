@@ -1,0 +1,106 @@
+﻿<div id="panelAdvancedSearch" class="card advanced-search">
+    <div class="card-header">
+        Advanced Search
+    </div>
+    <div class="card-body">
+        <form id="formAdvancedSearch">
+            <div class="form-row">
+                <div class="col">
+                    <input id="inputFirstNameSearch" type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="col">
+                    <input id="inputLastNameSearch" type="text" class="form-control" placeholder="Last Name">
+                </div>
+                <div class="col">
+                    <input id="inputEmailAddressSearch" type="text" class="form-control" placeholder="Email Address">
+                </div>
+                <div class="col">
+                    <input id="inputPhoneNumberSearch" type="text" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="col">
+                    <input id="inputResidentialZipcodeSearch" type="text" class="form-control" placeholder="Residential Zip Code">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button type="button" id="btnAdvancedSearch" class="btn btn-primary">Search</button>
+        <button type="button" id="btnReset" class="btn btn-secondary">Reset</button>
+    </div>
+</div>
+
+<button id="buttonAddCandidate" type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modalCandidate"><i class="fa fa-user-plus"></i></button>
+
+<div class="main-table">
+    <table id="tableCandidates" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Residential Zip Code</th>
+                <th />
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<!-- Candidate Modal -->
+<div class="modal fade" id="modalCandidate" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle" />
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="formCandidate">
+                <div class="modal-body">
+                    <div id="divInputId" class="form-group row">
+                        <label for="inputId" class="col-sm-3 col-form-label">Id:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputId" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputFirstName" class="col-sm-3 col-form-label">First Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputFirstName" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputLastName" class="col-sm-3 col-form-label">Last Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputLastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmailAddress" class="col-sm-3 col-form-label">Email Address:</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmailAddress" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhoneNumber" class="col-sm-3 col-form-label">Phone Number:</label>
+                        <div class="col-sm-9">
+                            <input type="tel" class="form-control" id="inputPhoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputResidentialZipCode" class="col-sm-3 col-form-label">Residential Zip Code:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputResidentialZipCode" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="buttonSave" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
