@@ -67,3 +67,6 @@ I used the Repository Pattern without the usage of any service for simplicity as
 About the UI, I decided to use jQuery for the data manipulation due to the simple requirements. I didn’t even use MVC properly because only one page contains all. In real-life scenario, I would have used a modern framework like Angular or Blazor.
 
 For the Unit Testing project, I considered important to test only the repository, focusing on the methods that return data.
+
+- [x] Done
+- [ ] Pending
